@@ -7,11 +7,11 @@ plugins {
 
 android {
     namespace = "ru.disspear574.notus"
-    compileSdk = 34
+    compileSdk = 29
 
     defaultConfig {
         applicationId = "ru.disspear574.notus"
-        minSdk = 30
+        minSdk = 29
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -20,12 +20,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                arguments = ["room.schemaLocation":
-//                "$projectDir/schemas".toString()]
-//            }
-//        }
     }
     buildTypes {
         release {
@@ -46,7 +40,6 @@ android {
 
     buildFeatures {
         compose = true
-        dataBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -59,7 +52,6 @@ android {
 }
 
 dependencies {
-//    implementation(libs.room.runtime)
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.room.ktx)
     ksp(libs.room.compilier)
